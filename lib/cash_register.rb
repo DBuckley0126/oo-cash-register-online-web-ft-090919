@@ -4,10 +4,10 @@ class CashRegister
 attr_accessor :total, :discount, :items, :last_void
 
 def initialize (discount = nil)
- @total = 0
+ @total = 0.0
  @discount = discount
  @items = []
- @last_void = 0
+ @last_void = 0.0
 end
 
 def add_item (title, price, quanity = 1)
