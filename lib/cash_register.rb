@@ -13,7 +13,7 @@ def add_item (title, price, quanity = 1)
 end
 
 def apply_discount
-  percentage = @discount.to_f/100.
+  percentage = @discount.to_f/100
   @total = @total*percentage
   binding.pry
 end
