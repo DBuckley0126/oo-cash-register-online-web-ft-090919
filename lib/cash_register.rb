@@ -15,7 +15,7 @@ end
 def apply_discount
   percentage = @discount.to_f/100
   @total = @total*percentage
-  binding.pry
+  #binding.pry
 end
 
 
