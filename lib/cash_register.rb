@@ -1,15 +1,17 @@
 require 'pry'
 class CashRegister
 
-attr_accessor :total, :discount
+attr_accessor :total, :discount, :items
 
 def initialize (discount = nil)
  @total = 0
  @discount = discount
+ @items = []
 end
 
 def add_item (title, price, quanity = 1)
 @total += price*quanity
+@items << title
 end
 
 def apply_discount
@@ -20,6 +22,10 @@ def apply_discount
   "After the discount, the total comes to $#{@total.to_i}."
 else
   "There is no discount to apply."
+end
+
+def items
+  @items
 end
   #binding.pry
 end
