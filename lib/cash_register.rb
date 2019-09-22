@@ -16,7 +16,11 @@ def apply_discount
   percentage = @discount.to_f/100
   discount_amount = @total*percentage
   @total = @total - discount_amount
+  if @discount
   "After the discount, the total comes to $#{@total.to_i}."
+else
+  "There is no discount to apply."
+end
   #binding.pry
 end
 
