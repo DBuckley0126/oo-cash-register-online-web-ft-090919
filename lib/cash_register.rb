@@ -36,7 +36,7 @@ end
 
 def void_last_transaction
   @items.pop
-  if @items.count == 0
+  if @items.empty?
     @total = 0.0
   else
     @total = @total - @last_void
