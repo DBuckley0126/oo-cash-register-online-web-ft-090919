@@ -14,6 +14,7 @@ def add_item (title, price, quanity = 1)
 for i in quanity
   @items << title
 end
+end
 
 def apply_discount
   percentage = @discount.to_f/100
