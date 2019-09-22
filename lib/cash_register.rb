@@ -8,11 +8,12 @@ def initialize (discount = nil)
  @discount = discount
  @items = []
  @last_void = 0.0
+ @last_qty = 0
 end
 
 def add_item (title, price, quanity = 1)
 @total += price*quanity
-
+@last_qty = quanity
 quanity.times do
   @items << title
 end
@@ -35,7 +36,10 @@ def items
 end
 
 def void_last_transaction
-  @items.pop
+  @last_qty.times do
+    @items.pop
+  end 
+  
   if @items.empty?
     @total = 0.0
   else
