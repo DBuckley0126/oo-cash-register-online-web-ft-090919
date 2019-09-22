@@ -40,6 +40,7 @@ def void_last_transaction
     @total = 0
   else
     @total = @total - @last_void
+  end
 end
 
 end
