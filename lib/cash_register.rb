@@ -38,8 +38,8 @@ end
 def void_last_transaction
   @last_qty.times do
     @items.pop
-  end 
-  
+  end
+
   if @items.empty?
     @total = 0.0
   else
