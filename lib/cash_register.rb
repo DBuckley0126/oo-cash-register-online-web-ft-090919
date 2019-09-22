@@ -17,7 +17,7 @@ def apply_discount
   discount_amount = @total*percentage
   @total = @total - discount_amount
 
-  puts "After the discount, the total comes to $#{@total.to_i}."
+  puts "After the discount, the total comes to $#{@total}."
   #binding.pry
 end
 
